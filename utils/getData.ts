@@ -3,7 +3,7 @@ async function getData(query: string, variables:{} = {}, cacheData:boolean = tru
      // console.log(process.env.NODE_API)
      // console.log('vars', variables)
      // console.log('query', query)
-    const res = await fetch("https://a.tdural1.ru/graphql", {
+    const res = await fetch("http://127.0.0.1:1337/graphql", {
         cache: cacheData ? 'force-cache' : 'no-store',
         method: 'POST',
         headers: {
