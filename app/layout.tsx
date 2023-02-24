@@ -5,6 +5,7 @@ import Footer from "#/components/Footer/Footer";
 import StoreWrapper from "#/components/StoreWrapper";;
 import {sfdisplaypro} from '#/components/fonts';
 import {Metadata} from "next";
+import Head from "next/head";
 
 export const metadata:Metadata = {
     title: {
@@ -17,7 +18,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 
     return (
         <html lang="ru" className={sfdisplaypro.className}>
-
+        <Head>
+            <meta name="yandex-verification" content="f41373ba3f02754a" />
+        </Head>
         <body className={"drawer-closed"}>
         <StoreWrapper>
             <Header/>
