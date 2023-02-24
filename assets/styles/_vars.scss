@@ -1,0 +1,21 @@
+:root {
+	--cols: 4;
+	@media screen and (min-width: 768px){
+		--cols: 8;
+	}
+	@media screen and (min-width: 1024px){
+		--cols: 12;
+	}
+
+	@media screen and (min-width: 1280px){
+		--cols: 12;
+	}
+
+	--container: 100%;
+	--container-lg: var(--xl);
+	--2xl: 1536px;
+	--xl: 1280px;
+	@media screen and (min-width: 1536px){
+		--container: var(--2xl);
+	}
+}

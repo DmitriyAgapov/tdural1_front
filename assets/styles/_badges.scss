@@ -1,0 +1,18 @@
+.badge {
+
+}
+.badge-discount {
+
+  @apply font-bold mb-3 block text-secondary;
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .badge__value {
+    position: absolute;
+    color: white;
+  }
+}

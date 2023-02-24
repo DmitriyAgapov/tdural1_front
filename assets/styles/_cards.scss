@@ -1,0 +1,446 @@
+.card {
+  position: relative;
+}
+
+.card-default {
+  @apply bg-white  px-8 pb-4 rounded-md drop-shadow-sm hover:shadow-2xl;
+}
+
+@layer components {
+
+  .card-truck {
+    display: flex;
+    grid-column: span 4;
+
+    overflow: hidden;
+    width: 100%;
+
+    .card__price-label {
+      @apply text-sm font-normal text-slate-400;
+    }
+
+    flex-direction: column;
+    @apply border-0 hover:drop-shadow-lg  bg-white col-span-4  px-4 pb-4 rounded-md drop-shadow-md shadow-md;
+    .card__img {
+      //margin: -2px;
+      margin: -.25rem -2.5rem -0.1rem;
+      border: 1px solid white;
+    }
+
+    .card__header {
+      @apply text-lg pt-6 pb-4 border-t-2 leading-6;
+    }
+
+    .card__content, .card__header {
+      @apply block;
+    }
+
+    .card__content {
+      flex: 1 100%;
+
+      > *:first-child {
+        @apply mt-0;
+      }
+
+      @apply mt-0 max-w-[320px] mx-auto w-full;
+    }
+
+    .card__specs {
+      display: grid;
+      //gap: .5rem;
+      li {
+        font-size: 1rem;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      li {
+        margin: .125rem 0;
+        @apply flex justify-between max-w-sm relative overflow-hidden;
+      }
+
+      .card__specs-label {
+        @apply text-sm;
+        &:after {
+          content: '...............................................................attr';
+          position: absolute;
+          @apply text-gray-300;
+        }
+      }
+
+      .card__specs-value {
+        @apply text-sm font-bold bg-white relative overflow-hidden pl-1;
+      }
+    }
+
+    .card__title {
+      //height: 6rem;
+      @apply mb-0  text-lg font-semibold inline border-b-2 border-transparent leading-none pb-0 no-underline text-black hover:text-slate-900 hover:border-slate-900;
+
+        line-height: 1;
+
+    }
+
+    .card__link {
+      @apply cursor-pointer;
+
+    }
+
+    .card__footer {
+      display: flex;
+      align-items: flex-end;
+      gap: .5rem;
+      justify-content: space-between;
+      @apply border-t-2 pt-4 pb-2;
+      .card__price {
+        @apply text-xl font-bold;
+        &.disabled {
+          @apply font-thin text-gray-400;
+
+        }
+
+        span {
+          margin-left: .5rem;
+          @apply text-lg text-slate-400 font-thin;
+        }
+      }
+
+    }
+
+    .card__price-value {
+      display: inline-flex;
+
+      span {
+        margin-left: .25rem;
+        @apply text-slate-400;
+      }
+    }
+
+    &.view-list {
+      grid-column: 1/-1;
+      display: grid;
+      @apply p-4  gap-x-4 border-0 mt-0;
+      max-width: initial;
+      width: 100%;
+      overflow: hidden;
+      grid-template: auto auto auto/20rem 1fr auto;
+      @media screen and (max-width: 768px) {
+
+      }
+
+      .card__img {
+        grid-row: 1/4;
+        margin: 0;
+        @apply -ml-6 -my-6 min-h-[10rem] lg:min-h-[14rem];
+      }
+
+      .card__header {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        @apply border-t-0 p-0 ml-2;
+      }
+
+      .card__content {
+        grid-row: 2/4;
+        grid-column: 2/3;
+        @apply max-w-[12rem] justify-self-start ml-2;
+      }
+
+      .card__specs li {
+        //justify-content: start;
+      }
+
+      .card__footer {
+        grid-column: 3/4;
+        grid-row: 1/4;
+        @apply border-t-0 pt-0 pl-4 border-l;
+        display: flex;
+        align-items: stretch;
+        flex-flow: column;
+      }
+
+      @media screen and (max-width: 768px) {
+        grid-template: auto auto auto/35vw 1fr;
+        .card__img {
+          grid-row: 1/4;
+          margin: 0;
+          @apply -ml-6 -my-6;
+        }
+        .card__content {
+          grid-row: 2/3;
+
+        }
+        .card__footer {
+          grid-column: 2/3;
+          grid-row: initial;
+        }
+      }
+    }
+  }
+
+      @media screen and (max-width: 768px) {
+        grid-template: auto auto auto/35vw 1fr;
+        .card__img {
+          grid-row: 1/4;
+          margin: 0;
+          @apply -ml-6 -my-6;
+        }
+        .card__content {
+          grid-row: 2/3;
+
+        }
+        .card__footer {
+          grid-column: 2/3;
+          grid-row: initial;
+        }
+      }
+    }
+.trucks-full-specs {
+  display: none;
+  border-width: 2px;
+
+  &.active {
+    display: block;
+  }
+}
+
+.card-service, .trucks-full-specs {
+  padding: 1rem;
+  margin: 0;
+
+  //border-width: 2px;
+
+  .card-service_items {
+    margin: 0;
+
+    li {
+      border-bottom-width: 2px;
+      line-height: 2;
+      font-size: 1.125em;
+
+      &:last-of-type {
+        border-bottom-width: 0;
+      }
+    }
+  }
+
+  grid-column: 1/-1;
+
+  grid-template: auto/1fr auto;
+  gap: 1rem;
+  margin-bottom: 2px;
+  align-items: center;
+
+  .card__price-value {
+    @apply text-xl font-bold;
+    span {
+      margin-left: .5rem;
+      @apply text-lg text-slate-400 font-thin;
+    }
+  }
+
+  .card__footer {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .card__title {
+    //height: 6rem;
+    @apply mb-0  text-xl font-medium inline pb-0 no-underline text-black hover:text-slate-900;
+  }
+
+  .card-service_item {
+    display: grid;
+    grid-template-columns: 1fr 10rem;
+    align-items: start;
+
+    h4 {
+      margin-top: 0;
+      text-transform: initial;
+      font-weight: 600;
+    }
+  }
+
+  //display: grid;
+  //grid-template: auto 1fr/20rem 1fr;
+  //gap: 2rem;
+  header {
+    //grid-row: 1/2;
+    //grid-column: 1/2;
+  }
+
+  .card__content {
+    //grid-row: 1/3;
+  }
+
+  footer {
+    //grid-row: 2/3;
+    //grid-column: 1/2;
+  }
+
+}
+
+.card-service {
+  display: grid;
+  padding: 1.5rem;
+  background: white;
+  transition: .1875s ease-in-out;
+
+  .card-title:hover {
+    border: none;
+  }
+
+  &:hover {
+    background: white;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: calc(1.5rem) 2.5rem;
+    outline: #0153af 2px solid;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  }
+}
+
+.card-parts {
+  overflow: hidden;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template: auto/6rem 1fr 19rem;
+  gap: 1rem;
+  margin-bottom: 2px;
+  align-items: center;
+  @apply bg-white py-3 px-10 lg:mx-0 md:px-6;
+  transition: .1875s ease-in-out;
+  @media screen and (max-width: 768px){
+    grid-template: auto/6rem 1fr 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .card-title:hover {
+    border: none;
+  }
+  @media screen and (min-width: 1024px){
+
+    &:hover {
+      background: white;
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding: .75rem 2.5rem;
+      outline: #0153af 2px solid;
+      @apply  shadow-neu bg-white z-20;
+      //box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+    }
+  }
+
+
+  .card__price-value {
+    @apply text-xl text-slate-700 font-bold text-right;
+    &.disabled {
+      @apply text-lg  font-thin text-gray-400;
+
+    }
+
+    span {
+      margin-left: 0;
+      @apply text-lg text-slate-400 font-thin;
+    }
+  }
+  .card__header {
+    @media screen and (max-width: 768px){
+      grid-column: 2/4;
+    }
+  }
+  .card__img {
+    @media screen and (max-width: 768px) {
+      grid-row: 1/2;
+      align-self: stretch;
+      @apply border-r-2 flex;
+      img {
+        margin: auto;
+      }
+    }
+  }
+  .card__footer {
+    display: grid;
+    grid-template-columns: auto 6rem 4rem;
+    gap: 1rem;
+    align-items: center;
+    .card__link {
+      grid-column: -2;
+    }
+    @media screen and (max-width: 768px){
+      grid-template-columns: 8rem auto 1fr;
+      grid-column: 1/4;
+      gap: .5rem;
+
+      .card__price {
+        grid-column: 1/2;
+        .card__price-value {
+          text-align: initial;
+        }
+
+      }
+      .card__price-amount {
+        justify-self: initial;
+        grid-column: 2/3;
+        .digit {
+          opacity: 1;
+        }
+      }
+      .card__link {
+        grid-column: 3/4;
+        max-width: 10rem;
+      }
+    }
+  }
+
+  .card__partnumber {
+    @apply text-sm;
+    line-height: 1;
+  }
+
+  .card__title {
+    //height: 6rem;
+    @apply mb-0  text-lg font-medium inline border-b-2 border-transparent pb-0 no-underline text-black hover:text-slate-900 hover:border-slate-900;
+  }
+}
+
+.trucks-full-specs {
+  padding: 0;
+  @apply shadow-2xl;
+  header {
+    padding: 2rem 3rem 1rem;
+    background: white;
+  }
+
+  .trucks-full-specs__content {
+    padding: 2rem 3rem 2rem;
+    background: #f6f6f6;
+  }
+}
+
+@layer components {
+
+
+  .card-parts-table {
+    @apply bg-gray-100 gap-0.5;
+    & > * {
+      @apply bg-white;
+    }
+    .table__price-value {
+      @apply text-xl text-slate-700 font-bold;
+      &.disabled {
+        @apply text-lg  font-thin text-gray-400;
+
+      }
+
+      span {
+        margin-left: .5rem;
+        @apply text-lg text-slate-400 font-thin;
+      }
+
+    }
+  }
+}

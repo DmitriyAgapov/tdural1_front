@@ -1,0 +1,2 @@
+GET https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJfXSzDKC-woAR8uZkzYkVkLA&key=AIzaSyB6qRbiQJNvpZQb3raRy4EMtG2BtfFtxu8
+Accept: application/json

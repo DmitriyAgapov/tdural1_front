@@ -1,0 +1,14 @@
+.switchers {
+	display: flex;
+	gap: 1rem;
+}
+.switcher {
+	cursor: pointer;
+	svg {
+		@apply fill-slate-300;
+	}
+	&.selected svg {
+		@apply fill-primary;
+	}
+
+}

@@ -1,0 +1,169 @@
+{
+  "version": 2,
+  "data": {
+    "api::part.part": {
+      "1": {
+        "id": 1,
+        "title": "236М2-100002022222222222",
+        "url": "test",
+        "publishDate": null,
+        "descriptionText": null,
+        "metaPageTitle": null,
+        "metaKeywords": null,
+        "metaDescription": null,
+        "createdAt": "2022-12-14T13:56:03.142Z",
+        "updatedAt": "2022-12-14T14:13:57.222Z",
+        "publishedAt": "2022-12-14T13:56:38.345Z",
+        "partNumber": "С КП 4К. БЕЗ ЗИП",
+        "price": "123213",
+        "image": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "part_category": [
+          3
+        ],
+        "createdBy": 1,
+        "updatedBy": 1
+      },
+      "2": {
+        "id": 2,
+        "title": "236М2-1000020",
+        "url": "test1",
+        "publishDate": null,
+        "descriptionText": null,
+        "metaPageTitle": null,
+        "metaKeywords": null,
+        "metaDescription": null,
+        "createdAt": "2022-12-14T13:56:18.816Z",
+        "updatedAt": "2022-12-14T13:56:41.386Z",
+        "publishedAt": "2022-12-14T13:56:41.384Z",
+        "partNumber": "С КП 4К. БЕЗ ЗИП",
+        "price": "123213",
+        "image": null,
+        "part_category": [
+          3
+        ],
+        "createdBy": 1,
+        "updatedBy": 1
+      }
+    },
+    "api::part-category.part-category": {
+      "1": {
+        "id": 1,
+        "title": " Специальная техника",
+        "content": null,
+        "createdAt": "2022-12-14T13:52:43.717Z",
+        "updatedAt": "2022-12-14T13:54:29.835Z",
+        "publishedAt": "2022-12-14T13:54:29.833Z",
+        "url": "spec-trucks",
+        "image": null,
+        "part_category": 2,
+        "parentCategory": null,
+        "part_categories": [],
+        "childCategory": [],
+        "parts": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "2": {
+        "id": 2,
+        "title": "Автомобили УРАЛ",
+        "content": null,
+        "createdAt": "2022-12-14T13:53:45.140Z",
+        "updatedAt": "2022-12-14T13:54:26.988Z",
+        "publishedAt": "2022-12-14T13:54:26.986Z",
+        "url": "urals",
+        "image": null,
+        "part_category": 3,
+        "parentCategory": 1,
+        "part_categories": [],
+        "childCategory": [],
+        "parts": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "3": {
+        "id": 3,
+        "title": "Седельные тягачи Урал",
+        "content": null,
+        "createdAt": "2022-12-14T13:54:07.410Z",
+        "updatedAt": "2022-12-14T13:54:33.180Z",
+        "publishedAt": "2022-12-14T13:54:33.178Z",
+        "url": "sedel",
+        "image": null,
+        "part_category": null,
+        "parentCategory": 2,
+        "part_categories": [],
+        "childCategory": [],
+        "parts": [
+          1,
+          2
+        ],
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
+    "plugin::upload.file": {
+      "1": {
+        "id": 1,
+        "name": "1.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "hash": "1_5d6875abf4",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "url": "/uploads/1_5d6875abf4.jpg",
+        "createdAt": "2022-12-14T14:13:52.387Z",
+        "updatedAt": "2022-12-14T14:13:52.387Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "2": {
+        "id": 2,
+        "name": "2.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "hash": "2_b66ee52a8f",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "url": "/uploads/2_b66ee52a8f.jpg",
+        "createdAt": "2022-12-14T14:13:52.441Z",
+        "updatedAt": "2022-12-14T14:13:52.441Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "3": {
+        "id": 3,
+        "name": "3.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "hash": "3_af775e150e",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "url": "/uploads/3_af775e150e.jpg",
+        "createdAt": "2022-12-14T14:13:52.504Z",
+        "updatedAt": "2022-12-14T14:13:52.504Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "4": {
+        "id": 4,
+        "name": "4.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "hash": "4_b2471a4f46",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "url": "/uploads/4_b2471a4f46.jpg",
+        "createdAt": "2022-12-14T14:13:52.562Z",
+        "updatedAt": "2022-12-14T14:13:52.562Z",
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
+    "plugin::upload.folder": {}
+  }
+}

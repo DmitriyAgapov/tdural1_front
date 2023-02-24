@@ -1,0 +1,142 @@
+.button,
+button {
+	border-collapse: collapse;
+	font-family: 'SF Pro Display', sans-serif;
+	//font-family: 'Montserrat', sans-serif;
+	display: inline-flex;
+	align-content: center;
+	justify-content: center;
+	letter-spacing: 0.03em;
+	//padding: .875rem 1.75rem;
+	text-align: center;
+
+	background-size: 300%;
+	background-position: left;
+	text-decoration: none;
+	font-size: 1rem;
+	line-height: 1rem;
+	text-transform: uppercase;
+
+	cursor: pointer;
+	border: 1px solid;
+	transition: .25s ease-in-out;
+	font-style: normal;
+
+	@apply  py-3.5 px-4 border-current  inline-flex rounded-[4px]  justify-center items-center bg-none hover:bg-gray-50 focus:ring-gray-800 focus:ring-offset-gray-200 hover:text-current transition ease-in duration-200 text-center text-base font-semibold hover:shadow-lg ;
+
+}
+.button-primary {
+	@apply  inline-flex justify-center items-center border-transparent bg-blue-700 hover:bg-blue-900 hover:text-white focus:ring-blue-800 focus:ring-offset-blue-200 text-white transition ease-in duration-200 text-center text-base font-semibold hover:shadow-lg;
+	//@apply bg-primary relative text-white hover:text-indigo-900 hover:bg-indigo-900 hover:drop-shadow-xl;
+	//padding: 0.875rem 1rem;
+	gap: 0.5rem;
+	align-items: center;
+	&:hover,
+	&:active,
+	&:focus {
+		@apply border-blue-900 outline-2 outline-blue-900 outline-offset-0 outline relative z-20;
+		text-decoration: none;
+		background-position: right;
+	}
+}
+.button-secondary {
+	@apply  inline-flex justify-center items-center border-transparent bg-orange-600 hover:bg-orange-500 hover:text-white focus:ring-orange-500 focus:ring-offset-orange-200 text-white transition ease-in duration-200 text-center text-base font-semibold hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2;
+	//@apply bg-primary relative text-white hover:text-indigo-900 hover:bg-indigo-900 hover:drop-shadow-xl;
+	//padding: 0.875rem 1rem;
+	gap: 0.5rem;
+	align-items: center;
+	&:hover,
+	&:active,
+	&:focus {
+		@apply border-orange-500 outline-2 outline-orange-500 outline-offset-0 outline relative z-20;
+		text-decoration: none;
+		background-position: right;
+	}
+}
+
+.button-lg {
+	@apply pt-4 pb-3.5  px-6 text-xl;
+}
+.button-sm {
+	@apply pt-3 pb-2.5 px-4 text-sm;
+}
+.button-xs {
+	@apply py-2 px-3 text-xs;
+}
+
+
+.button-outline {
+	@apply border-indigo-300 relative fill-indigo-500 text-indigo-500 hover:text-indigo-900 hover:bg-indigo-300 hover:shadow-none;
+	line-height: 1;
+	gap: 0.5rem;
+	align-items: center;
+	&:hover,
+	&:active,
+	&:focus {
+		@apply border-indigo-300 outline-2 outline-indigo-300 bg-opacity-25 outline-offset-0 outline-primary relative z-20;
+		text-decoration: none;
+		background-position: right;
+	}
+}
+.button-disabled {
+	@apply border-gray-300 text-gray-400 hover:shadow-none;
+	span {
+		display: none;
+	}
+}
+
+.button-link {
+	user-select: none;
+	@apply  inline-block bg-transparent rounded-none text-left hover:bg-transparent hover:shadow-none normal-case active:border-0 active:border-b-2 outline-0  relative overflow-hidden text-slate-400 px-0 pt-0 border-0 border-b-2 border-transparent;
+	&.active {
+		@apply border-0 text-current bg-transparent shadow-none;
+		&:after {
+			content: "";
+			background: linear-gradient(45deg,  rgb(13 30 112 / 1) 0%,  rgb(13 30 112 / 1) 100%);
+			height: .25em;
+			width: 100%;
+			bottom: 0;
+			transition: ease .25s;
+			position: absolute;
+			left: 0;
+			transform: translateX(0);
+		}
+	}
+
+	&:before {
+		content: "";
+		background: linear-gradient(-45deg, rgba(226, 232, 240, 0.75) 0%, rgba(226, 232, 240, 0.75) 100%);
+		height: .25em;
+		width: 100%;
+		bottom: 0;
+		transition: ease .25s;
+		position: absolute;
+		left: 0;
+		transform: translateX(0);
+	}
+	&:after {
+		content: "";
+		background: linear-gradient(45deg,  rgb(13 30 112 / 1) 0%,  rgb(13 30 112 / 1) 100%);
+		height: .25em;
+		width: 100%;
+		bottom: 0;
+		transition: ease .25s;
+		position: absolute;
+		left: 0;
+		transform: translateX(-105%);
+	}
+	&:hover::after {
+		transform: translateX(0);
+	}
+	&.link-current-page {
+		z-index: 22;
+		--tw-text-opacity: 1;
+
+		@apply text-primary;
+		&:after {
+			background: linear-gradient(45deg,   rgb(13 30 112 / 1) 0,  rgb(13 30 112 / 1) 100%);
+			transform: translateX(0);
+		}
+	}
+
+}

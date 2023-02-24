@@ -1,0 +1,612 @@
+.page {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &:before {
+    background: white;
+    margin-right: -1rem;
+    z-index: initial;
+  }
+
+  min-height: calc(100vh - 6rem);
+
+  .section__header {
+    grid-template-columns: 6rem 1fr;
+
+    svg {
+      scale: .625;
+    }
+  }
+
+  .section__description {
+    padding: 1.5rem;
+    @media screen and (max-width: 1024px) {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .section__header, .section__aside {
+    grid-column: 2/5;
+  }
+
+  .section__header, .section__description {
+    grid-row: 1/2;
+  }
+
+  .section__content, .section__description {
+    grid-column: 5/-2;
+    margin-bottom: 2rem;
+  }
+
+  .section__header {
+    position: sticky;
+    top: 20px;
+    background: white;
+    z-index: 11;
+    margin-bottom: 0;
+  }
+
+  .section__aside {
+    position: sticky;
+    top: 120px;
+    display: flex;
+    margin-bottom: auto;
+    flex-flow: column;
+
+  }
+
+  .aside__links {
+    position: sticky;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+    .button {
+      //display: initial;
+    }
+  }
+
+
+}
+
+.page-trucks {
+  header.section-heading-only {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+
+  }
+
+  .col-4-12 {
+    position: relative;
+  }
+
+  .section__cards {
+
+  }
+
+  .card-truck {
+    grid-column: span 3;
+    @media screen and (max-width: 1280px) {
+      grid-column: span 4;
+
+
+    }
+    @media screen and (max-width: 768px) {
+
+      //max-width: 20rem;
+      justify-self: center;
+
+    }
+  }
+
+  .section__content {
+    margin-top: 2rem;
+  }
+
+  .section__heading {
+    padding: 0;
+    border: 0;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .section__header {
+    //padding: 1.5rem 0;
+  }
+
+  .section__description {
+    @apply bg-white rounded-md;
+  }
+
+  .section__tabber {
+    justify-self: end;
+    align-self: end;
+    margin-left: auto;
+    //position: absolute;
+    //top: 6rem;
+    //right: 0;
+  }
+}
+
+.page-parts {
+
+  &:after {
+    content: none;
+  }
+
+  .col-4-12 {
+    position: relative;
+
+  }
+
+  .section__cards {
+    gap: 4px 1rem;
+    background: #fdfdf6;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .section__description {
+    @apply bg-white rounded-md;
+  }
+}
+
+.page-service {
+  .col-4-12 {
+
+    padding-left: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .section__description {
+    @apply bg-white rounded-md;
+  }
+}
+
+.page-truck {
+  min-height: calc(80vmin - 6rem);
+
+  h1 {
+
+    @apply text-primary mb-4 mt-2 text-2xl;
+    line-height: 1.25;
+  }
+
+  .truck-availible {
+
+    @apply text-secondary mt-4;
+  }
+  .grid-col {
+    display: block;
+    grid-row: 1/4;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+  .card__price-label {
+    @apply text-lg font-normal text-slate-400;
+  }
+  aside {
+    display: flex;
+    @apply items-stretch lg:items-center;
+    height: 100%;
+
+    flex: 1;
+  }
+  &.section-with-sidebar {
+  .grid-col {
+    padding-left: 0;
+    @apply lg:first-of-type:mr-[-2rem] first-of-type:self-stretch lg:pr-4;
+    &:last-of-type {
+      //grid-column-end: 16;
+      //min-height: 85vmin;
+      .card__image {
+        height: 100%;
+        display: grid;
+        gap: 1rem;
+        min-height: 60vmin;
+
+        @media screen and (min-width: 1280px) {
+          grid-template-columns: 1fr 6rem;
+        }
+        @media screen and (max-width: 1279px) {
+          .swiper-thumbs {
+            display: none;
+
+          }
+        @media screen and (max-width: 1023px) {
+          display: flex;
+         }
+
+        }
+      }
+    }
+  }
+    .card-default:not(.order-bar) {
+      @apply rounded-r-none;
+    }
+    @media screen and (max-width: 1024px) {
+      .grid-col {
+
+        @apply relative translate-x-0 top-0 col-span-full row-auto last-of-type:pt-0 py-0 my-0 last-of-type:row-start-1  last-of-type:mt-16;
+      }
+      .card-default:not(.order-bar) {
+        @apply rounded-r-none;
+        > * {
+          padding-left: 0;
+          margin-left: 0;
+        }
+      }
+      .truck-title {
+        @apply mt-0;
+      }
+      .section__content {
+			padding: 0;
+            display: block;
+		  //@apply -mx-4;
+      }
+    }
+
+  }
+
+  .section__content {
+    &:before {
+      background: white;
+      width: 300vw;
+      height: 100%;
+      display: block;
+      position: absolute;
+      z-index: -3;
+      left: -100vw;
+      top: 0;
+      /* bottom: 53rem; */
+    }
+
+    //overflow: hidden;
+    @apply bg-white flex-1  px-8 pb-4 rounded-md drop-shadow-sm p-8 pb-8 -my-8;
+    padding-bottom: 2rem;
+  }
+
+  .section__description {
+    margin-bottom: 0;
+    padding: 0;
+    @apply m-6;
+  }
+
+  .card__content {
+    flex: 1;
+
+    @media screen and (max-width: 1025px){
+      height: 100%;
+      display: block;
+    }
+
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .card__specs {
+    @apply pl-8;
+    font-size: 1.25rem;
+
+    li {
+      margin: .5rem 0;
+      @apply flex justify-between max-w-sm relative overflow-hidden;
+    }
+
+    .card__specs-label {
+      @apply text-base;
+      &:after {
+        content: '...............................................................attr';
+        position: absolute;
+        @apply text-gray-300;
+      }
+    }
+
+    .card__specs-value {
+      @apply text-lg font-bold bg-white relative overflow-hidden pl-1;
+    }
+
+  }
+
+  .order-bar {
+
+    background: white;
+    //max-width: fit-content;
+    @apply grid flex-wrap  gap-4 items-stretch lg:grid-cols-5 shadow-xl py-6 px-4 lg:px-8  border-0 border-gray-100 mt-0 rounded-r-none;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    margin-top: auto;
+
+    .price {
+      //text-align: center;
+      font-size: 2rem;
+      @apply lg:col-span-2 text-slate-700 font-bold;
+      &.disabled {
+        @apply font-thin text-gray-400;
+
+      }
+
+      span {
+        margin-left: .5rem;
+        @apply text-lg text-slate-400 font-thin;
+      }
+    }
+
+    .button {
+      @apply lg:col-span-3 self-center;
+      max-width: 20rem;
+      margin: auto;
+      width: 100%;
+    }
+  }
+
+  .swiper {
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+    &.swiper-thumbs {
+      .swiper-wrapper {
+        flex-direction: column;
+        width: 100%;
+        .swiper-slide {
+          // margin: 0.5rem 0;
+          filter: grayscale(0.85);
+          cursor: pointer;
+          &.swiper-slide-thumb-active, &:hover {
+            filter: grayscale(0);
+          } 
+        }
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    //flex-flow: column wrap;
+  }
+
+  .swiper-slide {
+    flex: 1 100%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+  &:before {
+    background: transparent;
+  }
+}
+
+.section-trucks-info {
+  padding-top: 0;
+  @apply border-t border-t-slate-300;
+  .section__tabber {
+    grid-column: 1/-1;
+    background: white;
+    @apply grid  pt-4 mx-auto;
+  }
+
+  .section__content {
+    grid-column: 1/-1;
+    background: #EBEBEB;
+    border-color: #1e3a8a;
+
+    & > * {
+      @apply container max-w-screen-xl mx-auto;
+    }
+
+    @apply flex flex-1 py-12 border-t-4;
+    &:before, &:after {
+      background: none;
+    }
+  }
+
+  .section__cards {
+    grid-column: 2/-2;
+  }
+
+  .section__service-tabs {
+
+    padding: 0rem 3rem 0rem;
+    grid-column: 2/-2;
+    overflow-y: hidden;
+    gap: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .button.button-link {
+      padding: 1rem 2rem;
+      margin-bottom: -2px;
+      z-index: 222;
+      position: relative;
+      overflow: visible;
+
+      &:before, &:after {
+        content: none;
+      }
+
+      &:hover {
+        @apply bg-gray-100;
+      }
+
+      &.active {
+        background: #1e3a8a;
+
+        color: white;
+
+        margin-bottom: -2px;
+      }
+    }
+    @media screen and (max-width: 1024px){
+      padding: 0;
+    }
+    @media screen and (max-width: 768px){
+
+      margin-bottom: -9px;
+
+      .button.button-link {
+          padding: .75rem .5rem 1rem;
+
+
+
+      }
+    }
+  }
+
+}
+
+.page-cart {
+  @media screen and (max-width: 1024px) {
+    &.section-with-sidebar {
+      .grid-col {
+        grid-column: 1/-1;
+        padding-bottom: 0;
+      }
+
+      &.sidebar-is-open {
+        overflow: hidden;
+
+        .grid-col:first-of-type {
+          top: 0;
+          margin-right: -2rem;
+          margin-left: -2rem;
+          padding-left: 2rem;
+          display: flex;
+          justify-content: center;
+          padding-right: 2rem;
+          grid-row: 2;
+
+          & > * {
+            -webkit-animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          }
+        }
+      }
+    }
+  }
+
+  padding-top: 2rem;
+  overflow: initial;
+
+  .section__description {
+    @apply p-6 mb-4 bg-gray-50;
+  }
+
+  .grid-col:first-child {
+    padding-top: 0;
+  }
+
+  .grid-col {
+    padding-top: 0;
+  }
+}
+.page-contacts {
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  aside {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+    .map {
+      grid-column: 1/-1;
+      width: 100%;
+      grid-row: 1/4;
+      min-height: 640px;
+      height: 100vmin;
+      filter: saturate(0.1) brightness(0.9);
+    }
+    .grid-col:nth-child(2) {
+      padding: 0;
+      grid-column: 6/-1;
+    }
+    .section__content {
+      flex: 1;
+      position: relative;
+
+    }
+  .sidebar__links {
+    display: flex;
+    justify-content: stretch;
+    justify-items: stretch;
+    align-self: center;
+    margin-top: auto;
+    align-items: stretch;
+    margin-right: 4rem;
+    a {
+      flex: 1 100%;
+    }
+  }
+    .phone,
+    .address, .email, .docs {
+      margin: 1rem 0;
+
+      .field__label {
+        display: block;
+        @apply text-slate-500 font-normal text-lg;
+      }
+      .field__value ~ .field__value {
+        display: block;
+      }
+      .field__value {
+        display: block;
+      }
+
+      .field__value, .field__value_link {
+
+        @apply text-xl font-medium;
+      }
+      .field__value_link {
+        display: inline-block;
+        @apply   py-2;
+        & {
+          @apply text-primary font-bold;
+          &:before, &:after {
+           @apply bg-slate-600;
+            height: 4px;
+          }
+        }
+      }
+
+
+    }
+
+
+  &.section-with-sidebar {
+    .grid-col {
+      margin-left: -1rem;
+      &:first-child {
+        grid-column: 2/6;
+      }
+    }
+    &:before {
+      background: white;
+      z-index: 20;
+    }
+  }
+}
