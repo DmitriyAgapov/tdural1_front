@@ -95,7 +95,7 @@ const CheckOutTable = (props) => {
 
                                         </th>
                                         <th scope="col"
-                                            className="py-3 px-6 text-sm uppercase font-semibold tracking-wider text-left text-slate-700">
+                                            className="py-3 px-6 text-sm uppercase font-semibold tracking-wider text-right text-slate-700">
                                             Цена
                                         </th>
                                         <th scope="col"

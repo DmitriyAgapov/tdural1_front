@@ -52,7 +52,7 @@ function TableRowItem ({item, attributes, price, index}) {
 
             </td>
 
-            <td className="py-4 px-2 md:py-3 md:px-2 md:pl-6 text-md font-medium leading-tight text-slate-900">
+            <td className="py-4 px-2 md:py-3 md:px-2 w-full md:pl-6 text-md font-medium leading-tight text-slate-900">
                 <div className={"partNumber text-sm text-slate-500 mb-1"}>{item.attributes.partNumber}</div>
                 {attributes.title}
             </td>
