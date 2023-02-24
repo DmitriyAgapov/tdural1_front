@@ -8,6 +8,7 @@ import {Metadata} from "next";
 import Head from "next/head";
 
 export const metadata:Metadata = {
+
     title: {
         default: 'Tdural1',
         template: '%s - Tdural1',
@@ -18,9 +19,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 
     return (
         <html lang="ru" className={sfdisplaypro.className}>
-        <Head>
+        <head>
             <meta name="yandex-verification" content="f41373ba3f02754a" />
-        </Head>
+        </head>
         <body className={"drawer-closed"}>
         <StoreWrapper>
             <Header/>
