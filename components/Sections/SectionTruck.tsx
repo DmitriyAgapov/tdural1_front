@@ -1,7 +1,7 @@
 import Section from "#/components/Sections/Section";
 import Button from "#/components/Button/Button";
 import SliderSwiperTruck from "#/components/Swiper/SliderSwiperTruck";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const SectionTruck = (props) => {
     const {id, attributes: {title,content, baseSpecs,image,url,instock,price       }   } = props;
@@ -54,7 +54,7 @@ const SectionTruck = (props) => {
                 <SliderSwiperTruck slidesPerView={1}
                                    items={image.data}/> : <div className={"col-span-2 relative overflow-hidden min-h-[50vmin] flex-1"}>
                     {image.data.length > 0 ?
-                        <Image layout="responsive" alt={title} src={`http://127.0.0.1:1337${image.data[0].attributes.url}`} width={image.data[0].attributes.width} height={260}/>
+                        <Image layout="responsive" alt={title} src={`https://a.tdural1.ru${image.data[0].attributes.url}`} width={image.data[0].attributes.width} height={260}/>
                         : <Image layout="responsive" alt={title} src={`/noimage.png`} width={400} height={260}/> }
                     </div>
             }

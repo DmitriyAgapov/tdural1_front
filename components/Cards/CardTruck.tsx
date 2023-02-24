@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from "next/link";
 import Button from "#/components/Button/Button";
 
@@ -24,7 +24,7 @@ const CardTruck = ({view, container = false, icon = null,attributes: {title, cat
 	  <div className={`card card-truck view-${!view ? 'grid' : 'list'} group `}>
 		  <div className={'card__img'}>
 			  {image.data.length > 0 ?
-				  <Image layout="responsive" alt={title} src={`http://127.0.0.1:1337${image.data[0].attributes.url}`} width={image.data[0].attributes.width} height={260}/>
+				  <Image layout="responsive" alt={title} src={`https://a.tdural1.ru${image.data[0].attributes.url}`} width={image.data[0].attributes.width} height={260}/>
 				  : <Image layout="responsive" alt={title} src={`/noimage.png`} width={400} height={260}/> }
 		  </div>
 		 <header className={'card__header'}>

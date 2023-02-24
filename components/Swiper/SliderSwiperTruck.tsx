@@ -18,7 +18,7 @@ const SliderSwiperTruck = (props: any) => {
      width={item.attributes.width}
       height={item.attributes.height}
        key={index}
-                                                              src={`http://127.0.0.1:1337${item.attributes.url}`}
+                                                              src={`https://a.tdural1.ru${item.attributes.url}`}
                                                               alt={''}/>)
     // console.log(items)
     const [mobile, setMobile] = useState(true);
