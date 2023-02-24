@@ -20,7 +20,7 @@ const SectionTruck = (props) => {
             contentType={'col-6-12 py-0 '}
             contentTypeInner={'card__image p-0 md:p-8 bg-white lg:rounded-md drop-shadow-2xl flex-1 flex'}
             aside={<div className={'card__content'}>
-                <div className={"card-default pt-4 hover:shadow-none lg:flex-1 mb-1"}>
+                <div className={"card-default pt-4 hover:shadow-none lg:flex-1 mb-0.5 rounded-b-none"}>
                     <div className={'truck-availible'}>{instock ? 'АВТО В НАЛИЧИИ' : 'АВТО ПОД ЗАКАЗ'}</div>
                     <h1 className={'truck-title'}>{title}</h1>
 
@@ -41,7 +41,7 @@ const SectionTruck = (props) => {
                     {content ? <div className={'section__description'}
                                     dangerouslySetInnerHTML={createMarkup(content)}/> : null}
                 </div>
-                <div className={'order-bar card-default !shadow-none hover:!shadow-none hover:!drop-shadow-none'}>
+                <div className={'order-bar card-default rounded-t-none !shadow-none hover:!shadow-none hover:!drop-shadow-none'}>
                     <div className={`price ${!price ? 'disabled' : ''}`}>{price ? <>
                         <div className="card__price-label">Цена:</div>
                         {price.toLocaleString()} <span>₽</span></> : 'По запросу'}</div>
@@ -54,7 +54,7 @@ const SectionTruck = (props) => {
                 <SliderSwiperTruck slidesPerView={1}
                                    items={image.data}/> : <div className={"col-span-2 relative overflow-hidden min-h-[50vmin] flex-1"}>
                     {image.data.length > 0 ?
-                        <Image layout="responsive" alt={title} src={`http://a.tdural1.ru${image.data[0].attributes.url}`} width={image.data[0].attributes.width} height={260}/>
+                        <Image layout="responsive" alt={title} src={`https://a.tdural1.ru${image.data[0].attributes.url}`} width={image.data[0].attributes.width} height={260}/>
                         : <Image layout="responsive" alt={title} src={`/noimage.png`} width={400} height={260}/> }
                     </div>
             }

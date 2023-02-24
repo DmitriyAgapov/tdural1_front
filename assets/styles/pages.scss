@@ -200,10 +200,10 @@
     @apply text-lg font-normal text-slate-400;
   }
   aside {
-    display: flex;
+
     @apply items-stretch lg:items-center;
     height: 100%;
-
+    padding: 2rem 0;
     flex: 1;
   }
   &.section-with-sidebar {
@@ -236,6 +236,7 @@
     }
   }
     .card-default:not(.order-bar) {
+      flex: 1 100%;
       @apply rounded-r-none;
     }
     @media screen and (max-width: 1024px) {
@@ -287,17 +288,16 @@
   }
 
   .card__content {
-    flex: 1;
-
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     @media screen and (max-width: 1025px){
       height: 100%;
       display: block;
     }
 
 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+
   }
 
   .card__specs {

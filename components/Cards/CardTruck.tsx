@@ -24,7 +24,7 @@ const CardTruck = ({view, container = false, icon = null,attributes: {title, cat
 	  <div className={`card card-truck view-${!view ? 'grid' : 'list'} group `}>
 		  <div className={'card__img'}>
 			  {image.data.length > 0 ?
-				  <Image layout="responsive" alt={title} src={`http://a.tdural1.ru${image.data[0].attributes.url}`} width={image.data[0].attributes.width} height={260}/>
+				  <Image layout="responsive" alt={title} src={`https://a.tdural1.ru${image.data[0].attributes.url}`} width={image.data[0].attributes.width} height={260}/>
 				  : <Image layout="responsive" alt={title} src={`/noimage.png`} width={400} height={260}/> }
 		  </div>
 		 <header className={'card__header'}>

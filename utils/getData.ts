@@ -3,7 +3,7 @@ async function getData(query: string, variables:{} = {}, cacheData:boolean = tru
      // console.log(process.env.NODE_API)
      // console.log('vars', variables)
      // console.log('query', query)
-    const res = await fetch("http://a.tdural1.ru/graphql", {
+    const res = await fetch("https://a.tdural1.ru/graphql", {
         cache: cacheData ? 'force-cache' : 'no-store',
         method: 'POST',
         headers: {
@@ -28,7 +28,7 @@ export async function getDataNoCache(query: string, variables:{} = {}) {
     // console.log(process.env.NODE_API)
     // console.log('vars', variables)
     // console.log('query', query)
-   const res = await fetch("http://a.tdural1.ru/graphql", {
+   const res = await fetch("https://a.tdural1.ru/graphql", {
        cache: 'no-store',
        method: 'POST',
        headers: {

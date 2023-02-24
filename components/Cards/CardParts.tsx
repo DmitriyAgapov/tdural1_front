@@ -27,7 +27,7 @@ const CardParts = ({item,attributes, price}) => {
 						return (<Image layout="responsive"
 									   key={index}
 									   alt={attributes.title}
-									   src={`http://a.tdural1.ru${item.attributes.url}`} width={item.attributes.width}
+									   src={`https://a.tdural1.ru${item.attributes.url}`} width={item.attributes.width}
 									   height={item.attributes.height}/>
 						)
 					}) : <Image layout="responsive"
